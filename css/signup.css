@@ -1,0 +1,27 @@
+/* ユーザーと販売員の画面切り替え */
+.selectnav{
+    position: absolute;
+    right: 5rem;
+    top: 1rem;
+}
+.selectuser a{
+    color: white;
+    text-decoration: none;
+}
+.selectuser a:hover{
+    text-decoration: solid underline rgba(250, 248, 248, 0.747) 3px;
+    list-style: none;
+    color: white;
+}
+.selectuser.none{
+    display: none;
+}
+.selectuser{
+    display: block;
+}
+.content{
+    display: none;
+}
+.content.active{
+    display: block;
+}
