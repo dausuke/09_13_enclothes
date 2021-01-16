@@ -23,7 +23,7 @@ function check_session_id()
 {
   // 失敗時はログイン画面に戻る
   if(!isset($_SESSION['session_id']) || $_SESSION['session_id'] != session_id()){
-    header('Location:index.php');
+    header('Location:../index.php');
   }else{
     session_regenerate_id(true);
     $_SESSION['session_id'] = session_id();

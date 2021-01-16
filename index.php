@@ -1,3 +1,10 @@
+<?PHP
+session_start();
+ini_set('display_errors', 1);
+
+// include('../functions.php');
+// check_session_id();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -21,7 +28,7 @@
             </div>
         </div>
     </header>
-    <main class="indexpage">
+    <div class="indexpage">
         <div class="introduction">
             <h1>enclothes</h1>
             <h2>人と物の出会いで新たな価値を創造する</h2>
@@ -29,7 +36,7 @@
             <p>そんな悩みを洋服のプロフェッショナルが解決します。</p>
             <p>enclothesでワクワクするような服との出会いを見つけませんか。</p>
         </div>
-    </main>
+    </ぢ>
     <script>
         $('#signin').on('click', function() {
             window.location.href = "signin_php/signin.php"

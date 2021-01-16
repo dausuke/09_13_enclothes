@@ -7,10 +7,12 @@ body{
     padding: 0;
 }
 main{
-    height: 100%;
-    display: flex;
+    width: 70%;
+    display: flex!important;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
 }
 form{
     height: 100%;
@@ -20,7 +22,6 @@ header{
     justify-content: center;
     align-items: center;
     width: 100%;
-    position: fixed;
     background-color: #464c56;
     color: white;
     border-bottom: 1px solid #333;
@@ -77,21 +78,110 @@ header{
     margin-top: 5rem;
 }
 .questionform{
-    width: 70%;
+    width: 100%;
 }
 .send-question:hover{
     background-color: rgb(141, 139, 139);
     color: white;
 }
-/* .question{
-    width: 8rem;
-    height: 2rem;
-    display: inline-flex;
+/* 質問表示画面 */
+.answer-area{
+    width: 100%;
+    margin: 3rem 0 0 0;
+}
+.answer-content{
+    display: none;
+}
+.answer-content.active{
+    display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #14db53;
-    color: white;
-    border:  #14db53;
-    border-radius: 5px;
+    width: 100%;
+    margin: 0;
+}
+.answer-content ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.question-Area{
+    display: flex;
+    justify-content: flex-start;
+    border-top: lightgrey solid 1px;
+    padding: 0;
+    position: relative;
+}
+.titlearea{
+    display: flex;
+    justify-content: center;
+}
+.question-stateArea{
+    margin-right: 3rem;
+    text-align: center;
+}
+.question-title a{
+    font-size: 2rem;
+}
+.question-date{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+/* questions.php */
+.title{
+    font-size: 2rem;
+    background-color: rgba(211, 211, 211, 0.658);
+}
+.questions{
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+}
+.questions dt{
+    margin-bottom: 5rem;
+    border: solid lightgrey 1px;
+    display: flex;
+    flex-direction: column;
+}
+.date{
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgba(211, 211, 211, 0.658);
+}
+.state{
+    display: flex;
+    justify-content: flex-start;
+}
+span{
+    margin: 0;
+    display: inline-flex;
+    font-size: 1.5rem;
     font-weight: bold;
-} */
+}
+span p{
+    margin: 0;
+}
+span p:nth-of-type(2) {
+    color: #ff0000;
+}
+.date p{
+    font-size: 0.8rem;
+    color: lightslategrey;
+}
+.answers{
+    margin-bottom: 2rem;
+    border-top: solid lightgray 1px;
+}
+dd{
+    margin: 0;
+}
+.solved{
+    width: 7rem;
+    height: 2rem;
+    color: white;
+    font-weight: bold;
+    background-color: #12c74b;
+    border: #12c74b;
+}
+.solved:hover{
+        background-color: #12c74bbb;
+}

@@ -7,14 +7,14 @@ body{
     padding: 0;
 }
 .indexpage{
+    width: 100%;
     background-image: url("../img/1221513.jpg");
     background-size:cover;
 }
 main{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
 }
 form{
     height: 100%;
@@ -49,6 +49,14 @@ header p{
     right: 1rem;
     bottom: 0;
 }
+.login-introducton{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 60%;
+    margin: 3rem 0 0 0 ;
+}
+
 .siginin{
     height: 1.5rem;
     width: 5rem;
@@ -106,9 +114,9 @@ header p{
   }
 }
 .signinform{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .signin-content{
     display: inline-flex;

@@ -20,6 +20,7 @@ $name = $_SESSION['name'];
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="../action.js"></script>
     <header>
         <div class="header-content">
             <p>enclothes</p>
@@ -27,34 +28,32 @@ $name = $_SESSION['name'];
                 <div class="signout" id="signout"><i class="fas fa-sign-out-alt"></i>ログアウト</div>
             </div>
             <div class="check-answer">
-                <div class="jump-answers">回答を見る</div>
+                <div class="jump-answers" id="jump-answers">相談一覧</div>
             </div>
         </div>
 
     </header>
     <div class="title"><h1>ようこそ<?=$name?>さん</h1></div>
     <div class="question-area">
-        <form class="questionform" action="signin_act.php" method="POST">
+        <form class="questionform" action="creat_question.php" method="POST">
             <fieldset class="signin-content">
                 <div class="form-group">
                     <input type="text" name="question-title" class="form-control" placeholder="相談のタイトルを１０文字以上１００文字未満で記入してください" >
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" name="question-contents" cols="50" rows="10"></textarea>
+                    <textarea class="form-control" name="question-contents" rows="10"></textarea>
+                    <input type="hidden" name="uid" value="<?=$uid?>">
                 </div>
                 <div class="form-group">
-                    <button class="send-question form-control"><i class="fas fa-edit"></i>相談する</button>
+                    <button type="submit" class="send-question form-control"><i class="fas fa-edit"></i>相談する</button>
                 </div>
             </fieldset>
         </form>
     </div>
     <script>
-        //ログアウト
-        $('#signout').on('click',function(){
-            window.location.href = "../signout.php";
-        })
-        $('#question').on('click',function(){
-            window.location.href = "creat_question.php";
+        //相談一覧画面
+        $('#jump-answers').on('click',function(){
+            window.location.href = "questions.php";
         })
     </script>
 </body>

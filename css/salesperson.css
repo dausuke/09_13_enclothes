@@ -7,10 +7,12 @@ body{
     padding: 0;
 }
 main{
-    height: 100%;
-    display: flex;
+    width: 70%;
+    display: flex!important;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
 }
 form{
     height: 100%;
@@ -20,7 +22,6 @@ header{
     justify-content: center;
     align-items: center;
     width: 100%;
-    position: fixed;
     background-color: #464c56;
     color: white;
     border-bottom: 1px solid #333;
@@ -54,13 +55,18 @@ header{
 .title{
     text-align: center;
 }
+/* salesperson.php */
 /* タブ画面 */
 nav{
     margin-top: 10rem;
-    /* padding-bottom: 0!important; */
+    width: 100%;
+}
+.navbar-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between!important;
 }
 .nav-item{
-    margin:0 1rem 0 1rem ;
     padding: 1rem 2rem 1rem 2rem;
     background-color: rgba(193, 192, 209, 0.39);
     color: rgb(107, 103, 103);
@@ -75,13 +81,98 @@ nav{
     border: solid 1px lightgrey;
     border-bottom: transparent;
 }
+/* 質問表示画面 */
+.answer-area{
+    width: 100%;
+    margin: 0;
+}
 .answer-content{
     display: none;
 }
 .answer-content.active{
-    display: block;
-}
-.answer-content.active{
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+.answer-content ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.question-Area{
+    display: flex;
+    justify-content: flex-start;
+    border-top: lightgrey solid 1px;
+    padding: 0;
+    position: relative;
+}
+.titlearea{
+    display: flex;
+    justify-content: center;
+}
+.question-stateArea{
+    margin-right: 3rem;
+    text-align: center;
+}
+.question-state{
+    background-color: rgba(193, 192, 209, 0.39);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.question-title a{
+    font-size: 2rem;
+}
+.question-date{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+/* questions.php */
+.title {
+    font-size: 2rem;
+}
+.question-detail{
+    width: 100%;
+    text-align: center;
+    border: solid lightgrey 1px;
+    margin-top: 5rem;
+    position: relative;
+}
+.question-detail dt{
+    border-bottom: solid lightgrey 1px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(211, 211, 211, 0.658);
+}
+.state-date{
+    display: flex;
+    justify-content: flex-start;
+}
+.state{
+    display: flex;
+    justify-content: center;
+}
+.state p{
+    margin: 0 1rem 0 0;
+    font-size: 0.8rem;
+}
+.date p{
+    margin: 0;
+    font-size: 0.8rem;
+    color: lightslategrey;
+}
+.answes-btn{
+    width: 7rem;
+    height: 2rem;
+    color: white!important;
+    font-weight: bold!important;
+    background-color: #12c74b!important;
+    border: #12c74b!important;
+}
+.answes-btn:hover{
+    background-color: #12c74bbb!important;
+}
+.answers-area{
+    width: 100%;
 }
