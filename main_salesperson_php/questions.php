@@ -84,7 +84,7 @@ if ($question_status == false) {
                             <textarea class="form-control" name="question_ontents" rows="15"></textarea>
                             <input type="hidden" name="salesperson_id" value="<?=$uid?>">
                             <input type="hidden" name="question_id" value="<?=$questionId?>">
-                            <input type="hidden" name="questionuser" value="<?=$result['uid']?>">
+                            <input type="hidden" name="questionuser" value="<?=$question_result['uid']?>">
                         </div>
                         <div class="form-group">
                             <button class="answes-btn form-control">回答を投稿</button>

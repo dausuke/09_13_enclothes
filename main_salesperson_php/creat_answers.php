@@ -5,6 +5,8 @@ ini_set( 'display_errors', 1 );
 $question_id = $_POST['question_id'];
 $salesperson_id = $_POST['salesperson_id'];
 $questionuser = $_POST['questionuser'];
+// var_dump($questionuser);
+// exit();
 $question_ontents = $_POST['question_ontents'];
 // DB接続の設定
 include('../functions.php');
